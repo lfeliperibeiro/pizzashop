@@ -21,6 +21,7 @@ export function Pagination({
   onPageChange,
 }: PaginationProps) {
   const pages = Math.ceil(totalCount / perPage) || 1
+
   return (
     <div className="flex items-center justify-between">
       <span className="text-sm text-muted-foreground">
