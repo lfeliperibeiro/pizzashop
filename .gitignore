@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#SonarQubetest-report.xml
+eslint-report.json
+/.scannerwork
