@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:mocker": "vite --port 5050 --mode test",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "test": "vitest run",
@@ -16,7 +17,7 @@
   "lint-staged": {
     "*.ts?(x)": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
-    "dependencies": {
+  "dependencies": {
     "@hookform/resolvers": "^3.3.4",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
@@ -65,6 +66,7 @@
     "happy-dom": "^13.3.8",
     "husky": "^9.0.7",
     "lint-staged": "^15.2.1",
+    "msw": "^2.1.5",
     "nyc": "^15.1.0",
     "postcss": "^8.4.33",
     "prettier-plugin-tailwindcss": "^0.5.11",
@@ -73,5 +75,10 @@
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
     "vitest": "^1.2.2"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }
