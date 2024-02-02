@@ -26,3 +26,5 @@ dist-ssr
 #SonarQubetest-report.xml
 eslint-report.json
 /.scannerwork
+coverage
+.nyc_output
