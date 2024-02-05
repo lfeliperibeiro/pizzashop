@@ -1,6 +1,6 @@
 type OrderStatus =
   | 'pending'
-  | 'cancelled'
+  | 'canceled'
   | 'processing'
   | 'delivering'
   | 'delivered'
@@ -11,7 +11,7 @@ interface OrderStatusProps {
 
 const orderStatusMap: Record<OrderStatus, string> = {
   pending: 'Pendente',
-  cancelled: 'Cancelado',
+  canceled: 'Cancelado',
   delivered: 'Entregue',
   delivering: 'Em entrega',
   processing: 'Em preparo',
@@ -26,7 +26,7 @@ export function OrderStatus({ status }: OrderStatusProps) {
           data-testid="order-status-badge"
         />
       )}
-      {status === 'cancelled' && (
+      {status === 'canceled' && (
         <span
           className="h-2 w-2 rounded-full bg-rose-500"
           data-testid="order-status-badge"
