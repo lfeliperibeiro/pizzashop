@@ -1,6 +1,8 @@
 import { http, HttpResponse } from 'msw'
 
-export const dispatchOrderMock = http.patch(
+import { DispatchOrderParams } from '../dispatch-order'
+
+export const dispatchOrderMock = http.patch<DispatchOrderParams, never, never>(
   '/orders/:orderId/dispatch',
   async ({ params }) => {
     if (params.orderId === 'error-order-id') {
