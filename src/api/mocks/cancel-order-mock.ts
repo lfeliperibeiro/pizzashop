@@ -1,6 +1,8 @@
 import { http, HttpResponse } from 'msw'
 
-export const cancelOrderMock = http.patch(
+import { CancelOrderParams } from '../cancel-order'
+
+export const cancelOrderMock = http.patch<CancelOrderParams, never, never>(
   '/orders/:orderId/cancel',
   async ({ params }) => {
     if (params.orderId === 'error-order-id') {
