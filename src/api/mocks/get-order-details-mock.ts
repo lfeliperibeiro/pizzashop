@@ -12,7 +12,7 @@ export const getOrderDetailsMock = http.get(
       id: params.orderId,
       customer: {
         name: 'John Doe',
-        email: 'johnDoe@example.com',
+        email: 'johndoe@example.com',
         phone: '123456789',
       },
       status: 'delivered',

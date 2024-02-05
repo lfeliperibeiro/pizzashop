@@ -13,7 +13,7 @@ export const getManagedRestaurantMock = http.get<
     description: 'A restaurant',
     managerId: 'custom-user-id',
     createdAt: new Date(),
-    email: 'johnDoe@example.com',
+    email: 'johndoe@example.com',
     updatedAt: null,
   })
 })
