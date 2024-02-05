@@ -6,7 +6,7 @@ type OrderStatus = Order['status']
 
 const statuses: OrderStatus[] = [
   'pending',
-  'cancelled',
+  'canceled',
   'processing',
   'delivering',
   'delivered',
