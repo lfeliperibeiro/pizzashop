@@ -7,7 +7,7 @@ export interface GetOrderParams {
   status?: string | null
 }
 
-interface Order {
+export interface Order {
   orderId: string
   createdAt: string
   status: 'pending' | 'cancelled' | 'processing' | 'delivering' | 'delivered'
