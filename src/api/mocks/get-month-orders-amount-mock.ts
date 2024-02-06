@@ -1,13 +1,14 @@
 import { http, HttpResponse } from 'msw'
 
-// todo: insert type after the body is defined
+import { GetMonthOrdersAmountResponse } from '../get-month-orders-amount'
 
-export const getMonthOrdersAmountMock = http.get(
-  '/metrics/month-orders-amount',
-  () => {
-    return HttpResponse.json({
-      amount: 20,
-      diffFromLastMonth: -5,
-    })
-  },
-)
+export const getMonthOrdersAmountMock = http.get<
+  never,
+  never,
+  GetMonthOrdersAmountResponse
+>('/metrics/month-orders-amount', () => {
+  return HttpResponse.json({
+    amount: 20,
+    diffFromLastMonth: -5,
+  })
+})

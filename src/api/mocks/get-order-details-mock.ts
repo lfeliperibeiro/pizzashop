@@ -30,7 +30,7 @@ export const getOrderDetailsMock = http.get<
       {
         id: 'product-2',
         product: { name: 'Coke' },
-        priceCents: 2000,
+        priceInCents: 2000,
         quantity: 4,
       },
     ],

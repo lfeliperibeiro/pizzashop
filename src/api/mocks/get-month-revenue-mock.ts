@@ -1,8 +1,12 @@
 import { http, HttpResponse } from 'msw'
 
-// todo: insert type after the body is defined
+import { GetMonthRevenueResponse } from '../get-month-revenue'
 
-export const getMonthRevenueMock = http.get('/metrics/month-receipt', () => {
+export const getMonthRevenueMock = http.get<
+  never,
+  never,
+  GetMonthRevenueResponse
+>('/metrics/month-receipt', () => {
   return HttpResponse.json({
     receipt: 40000,
     diffFromLastMonth: 10,
